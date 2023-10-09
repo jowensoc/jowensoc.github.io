@@ -1,0 +1,118 @@
+html {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.game-title {
+    text-align: center;
+}
+
+#mahjong-game-area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#mahjong-game-board {
+    display: inline-block;
+    border: none;
+    text-align: center;
+    width: 65%;
+}
+
+#mahjong-side-menu {
+    float: right;
+    font-size: 1.5em;
+    vertical-align: top;
+    width: 20%;
+}
+
+.mahjong-menu-option {
+    background-color: bisque;
+    background-image: radial-gradient(blanchedalmond 75%, burlywood);
+    border: burlywood 0.1em solid;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    color: #000;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.mahjong-menu-option:hover, .mahjong-menu-option:focus, .mahjong-menu-option:active {
+    background-color: burlywood;
+    background-image: radial-gradient(burlywood 75%, gray);
+    border: burlywood 0.1em solid;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.game-tile {
+    display: inline-block;
+    padding: 0.8em;
+    margin: 0.2em;
+    border-radius: 1em;
+    background-image: radial-gradient(blanchedalmond 65%, burlywood);
+}
+
+.game-tile p {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.game-active-tile {
+    border: burlywood 0.3em solid;
+    cursor: pointer;
+}
+
+.game-inactive-tile {
+    background-color: whitesmoke;
+    background-image: radial-gradient(whitesmoke, whitesmoke);
+    border: lightgray 0.3em solid;
+    cursor: default;
+}
+
+.game-inactive-tile p {
+    color: gray;
+}
+
+.game-tile-selected {
+    border: darkred 0.3em solid;
+}
+
+
+.game-description {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.game-status-success {
+    background-color: greenyellow;
+    color: #000;
+    border: green 0.1em solid;
+    border-radius: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 0.5em;
+    }
+
+    #mahjong-game-area {
+        width: 100%;
+    }
+
+    #mahjong-game-board {
+        width: 55%;
+    }
+
+    #mahjong-side-menu {
+        display: inline-block;
+        vertical-align: top;
+        width: 35%;
+    }
+}
