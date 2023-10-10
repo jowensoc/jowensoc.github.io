@@ -80,6 +80,14 @@ html {
     border: darkred 0.3em solid;
 }
 
+.game-custom-text {
+    font-size: 0.5em;
+    text-align: left;
+}
+
+.game-custom-text input {
+    width: 75%;
+}
 
 .game-description {
     text-align: center;
@@ -114,5 +122,14 @@ html {
         display: inline-block;
         vertical-align: top;
         width: 35%;
+    }
+
+    .game-custom-text {
+        text-align: right;
+        font-size: 0.8em;
+    }
+
+    .game-custom-text input {
+       width: 45%;
     }
 }
