@@ -45,6 +45,11 @@ function createGameSettings(gameMode) {
             endRange = 2000;
             requireTiles = 30;
             break;
+        case "custom":
+            startRange = parseTextBox("min-range", 1);
+            endRange = parseTextBox("max-range", 10);
+            requireTiles = parseTextBox("no-of-tiles", 20);
+            break;
         default:
             startRange = 1;
             endRange = 10;
@@ -62,6 +67,22 @@ function clearBoard() {
     gameBoard.innerHTML = '';
 }
 
+function parseTextBox(txtBox, defaultVal) {
+    let txtBoxVal = defaultVal;
+
+    if (document.getElementById(txtBox).value.trim().length > 0) {
+        txtBoxVal = document.getElementById(txtBox).value;
+    }
+
+    let intVal = parseInt(txtBoxVal);
+
+    if (intVal === NaN) {
+        intVal = defaultVal;
+    }
+
+    return intVal;
+}
+
 function setupMenu() {
     document.getElementById("mahjong-easy-game").addEventListener("click", () => {
         initGame("easy");
@@ -77,6 +98,10 @@ function setupMenu() {
 
     document.getElementById("mahjong-impossible-game").addEventListener("click", () => {
         initGame("impossible");
+    });
+
+    document.getElementById("mahjong-custom-game").addEventListener("click", () => {
+        initGame("custom");
     });
 }
 
